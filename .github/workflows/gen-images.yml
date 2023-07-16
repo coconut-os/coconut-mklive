@@ -1,4 +1,4 @@
-name: Build void images
+name: Build coconutOS images
 
 on:
   workflow_dispatch:
