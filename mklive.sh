@@ -88,7 +88,7 @@ directory if unset).
  -v linux<version>  Install a custom Linux version on ISO image (linux meta-package if unset).
  -K                 Do not remove builddir.
 
-The $PROGNAME script generates a live image of the Void Linux distribution.
+The $PROGNAME script generates a live image of the coconutOS distribution.
 This ISO image can be written to a CD/DVD-ROM or any USB stick.
 _EOF
     exit 1
@@ -341,7 +341,7 @@ ARCH=$(xbps-uhelper arch)
 : ${INITRAMFS_COMPRESSION:=xz}
 : ${SQUASHFS_COMPRESSION:=xz}
 : ${BASE_SYSTEM_PKG:=base-system}
-: ${BOOT_TITLE:="Void Linux"}
+: ${BOOT_TITLE:="coconutOS"}
 
 case $BASE_ARCH in
     x86_64*|i686*) ;;

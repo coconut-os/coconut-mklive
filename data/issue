@@ -1,9 +1,9 @@
 ###############################################################################
 
-Welcome to the Void Linux Live system. Two users are available to log in:
+Welcome to the coconutOS Live system. Two users are available to log in:
 
-	- root:voidlinux
-	- anon:voidlinux
+	- root:coconut
+	- anon:coconut
 
 The `anon` user additionally has `sudo(8)` permissions to run any command
 without a password.
@@ -21,8 +21,8 @@ sure to configure your network interface and then use:
 The Void Linux Handbook is also available for offline access in multiple
 formats, and can be accessed with the `void-docs(1)` utility.
 
-Thanks for using Void Linux.
+Thanks for using coconutOS.
 
-    https://www.voidlinux.org
+    https://github.com/coconut-os
 
 ###############################################################################

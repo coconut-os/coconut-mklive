@@ -27,9 +27,9 @@ fi
 chroot ${NEWROOT} useradd -m -c $USERNAME -G audio,video,wheel -s $USERSHELL $USERNAME
 chroot ${NEWROOT} passwd -d $USERNAME >/dev/null 2>&1
 
-# Setup default root/user password (voidlinux).
-chroot ${NEWROOT} sh -c 'echo "root:voidlinux" | chpasswd -c SHA512'
-chroot ${NEWROOT} sh -c "echo "$USERNAME:voidlinux" | chpasswd -c SHA512"
+# Setup default root/user password (coconut).
+chroot ${NEWROOT} sh -c 'echo "root:coconut" | chpasswd -c SHA512'
+chroot ${NEWROOT} sh -c "echo "$USERNAME:coconut" | chpasswd -c SHA512"
 
 # Enable sudo permission by default.
 if [ -f ${NEWROOT}/etc/sudoers ]; then

@@ -96,7 +96,7 @@ WIDGET_SIZE="10 70"
 DIALOG() {
     rm -f $ANSWER
     dialog --colors --keep-tite --no-shadow --no-mouse \
-        --backtitle "${BOLD}${WHITE}Void Linux installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
+        --backtitle "${BOLD}${WHITE}coconutOS installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
         --cancel-label "Back" --aspect 20 "$@" 2>$ANSWER
     return $?
 }
@@ -104,7 +104,7 @@ DIALOG() {
 INFOBOX() {
     # Note: dialog --infobox and --keep-tite don't work together
     dialog --colors --no-shadow --no-mouse \
-        --backtitle "${BOLD}${WHITE}Void Linux installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
+        --backtitle "${BOLD}${WHITE}coconutOS installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
         --title "${TITLE}" --aspect 20 --infobox "$@"
 }
 
@@ -1419,7 +1419,7 @@ ${BOLD}Do you want to continue?${RESET}" 20 80 || return
     umount_filesystems
 
     # installed successfully.
-    DIALOG --yesno "${BOLD}Void Linux has been installed successfully!${RESET}\n
+    DIALOG --yesno "${BOLD}coconutOS has been installed successfully!${RESET}\n
 Do you want to reboot the system?" ${YESNOSIZE}
     if [ $? -eq 0 ]; then
         shutdown -r now
@@ -1463,7 +1463,7 @@ menu() {
         AFTER_HOSTNAME="Timezone"
         DIALOG --default-item $DEFITEM \
             --extra-button --extra-label "Settings" \
-            --title " Void Linux installation menu " \
+            --title " coconutOS installation menu " \
             --menu "$MENULABEL" 10 70 0 \
             "Keyboard" "Set system keyboard" \
             "Network" "Set up the network" \
@@ -1482,7 +1482,7 @@ menu() {
         AFTER_HOSTNAME="Locale"
         DIALOG --default-item $DEFITEM \
             --extra-button --extra-label "Settings" \
-            --title " Void Linux installation menu " \
+            --title " coconutOS installation menu " \
             --menu "$MENULABEL" 10 70 0 \
             "Keyboard" "Set system keyboard" \
             "Network" "Set up the network" \
@@ -1544,12 +1544,14 @@ fi
 # main()
 #
 DIALOG --title "${BOLD}${RED} Enter the void ... ${RESET}" --msgbox "\n
-Welcome to the Void Linux installation. A simple and minimal \
-Linux distribution made from scratch and built from the source package tree \
-available for XBPS, a new alternative binary package system.\n\n
+Welcome to the coconutOS installation. The one and only true OS. \
+The coconutOS Linux distribution is a fork of Void Linux, the second \
+best Linux distribution around and made from scratch and built from \
+the source package tree available for XBPS, a new alternative binary \
+package system.\n\n
 The installation should be pretty straightforward. If you are in trouble \
-please join us at ${BOLD}#voidlinux${RESET} on ${BOLD}irc.libera.chat${RESET}.\n\n
-${BOLD}https://www.voidlinux.org${RESET}\n\n" 16 80
+please join us at ${BOLD}#coconutos${RESET} on ${BOLD}irc.libera.chat${RESET}.\n\n
+${BOLD}https://github.com/coconut-os${RESET}\n\n" 16 80
 
 while true; do
     menu

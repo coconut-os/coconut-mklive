@@ -68,7 +68,7 @@ Options:
  -T "title"         Modify the bootloader title.
  -S "splash image"  Set a custom splash image for the bootloader
 
-The $PROGNAME script generates a network-bootable tarball of Void Linux
+The $PROGNAME script generates a network-bootable tarball of coconutOS
 _EOF
     exit 1
 }
@@ -232,7 +232,7 @@ if [ ${bootloader_pkg} = "syslinux" ] ; then
         -e "s|@@KEYMAP@@|${KEYMAP-us}|" \
         -e "s|@@ARCH@@|$XBPS_TARGET_ARCH|" \
         -e "s|@@LOCALE@@|${LOCALE-en_US.UTF-8}|" \
-        -e "s|@@BOOT_TITLE@@|${BOOT_TITLE-Void Linux}|" \
+        -e "s|@@BOOT_TITLE@@|${BOOT_TITLE-coconutOS}|" \
         -e "s|@@BOOT_CMDLINE@@|${BOOT_CMDLINE}|" \
         "$PXELINUX_DIR/default"
 else

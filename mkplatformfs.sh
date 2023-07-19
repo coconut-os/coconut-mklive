@@ -200,7 +200,7 @@ if [ ! -f "$ROOTFS/boot/uInitrd" ] ||
     run_cmd_chroot "$ROOTFS" "env -i /usr/bin/dracut $dracut_args /boot/initrd $KERNELVERSION"
     [ $? -ne 0 ] && die "Failed to generate the initramfs"
 
-    run_cmd_chroot "$ROOTFS" "env -i /usr/bin/mkimage -A arm -O linux -T ramdisk -C gzip -a 0 -e 0 -n 'Void Linux' -d /boot/initrd /boot/uInitrd"
+    run_cmd_chroot "$ROOTFS" "env -i /usr/bin/mkimage -A arm -O linux -T ramdisk -C gzip -a 0 -e 0 -n 'coconutOS' -d /boot/initrd /boot/uInitrd"
 fi
 
 cleanup_chroot
